@@ -12,10 +12,10 @@ CORS(app)
 app.secret_key=os.urandom(24)
 ############## < MySQL Settings > ##############
 myHost=Host()
-app.config['MYSQL_HOST'] = myHost.hostName #"localhost"
-app.config['MYSQL_USER'] = myHost.hostUser#"root"
-app.config['MYSQL_PASSWORD'] = myHost.hostPassword#""
-app.config['MYSQL_DB'] = myHost.hostDB#"brainsoup"
+app.config['MYSQL_HOST'] = myHost.hostName 
+app.config['MYSQL_USER'] = myHost.hostUser
+app.config['MYSQL_PASSWORD'] = myHost.hostPassword
+app.config['MYSQL_DB'] = myHost.hostDB
 mysql=MySQL(app)
 ############## </MySQL Settings > ############## 
 @app.route('/',methods=['GET','POST'])

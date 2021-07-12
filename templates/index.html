@@ -1,26 +1,45 @@
-<html>
 
-<head>
-    <meta charset="utf-8" />
-</head>
-
-<body>
-
+{% extends "base.html" %}
+{% block title %} - Home Page {% endblock %}
+{% block content %}
    
-</body>
+    <!--====== SLIDER PART START ======-->
 
-</html>
+    <section id="home" class="slider_area">
+        <div id="carouselThree" class="carousel slide" data-ride="carousel">
+            
 
-<!doctype html>
-<html>
-<h1> 
-    Mouse Hareketlerini Javascript ve Flask Kullanarak Kaydetme
-</h1>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="slider-content">
+                                    <h1 class="title">Social Distance Detection</h1>
+                                    <p class="text">Check social distancing in istanbul with mobese cameras .</p>
+                                    <ul class="slider-btn rounded-buttons">
+                                        <li><a class="main-btn rounded-one" href="#">Watch Mobese</a></li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+                    <div class="slider-image-box d-none d-lg-flex align-items-end">
+                        <div class="slider-image">
+                            <img src="{{ url_for('static', filename='assets/images/slider/2.png') }} "  alt="Hero">
+                        </div> 
+                    </div> 
+                </div> 
+            
+            </div>
 
-<body>
+           
+        </div>
+    </section>
 
+    <!--====== SLIDER PART ENDS ======-->
     
-    <script src="{{ url_for('static', filename='assets/js/mousetracker.js') }}"></script>
-</body>
-
-</html>
+   
+    
+    {% endblock %}
